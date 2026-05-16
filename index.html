@@ -75,7 +75,7 @@
         /* Container global */
         .container {
             max-width: 900px;
-            margin: 100px auto 0 auto;
+            margin: 80px auto 0 auto;
             padding: 0 20px;
         }
 
@@ -101,21 +101,30 @@
             text-align: justify;
         }
 
-        /* Section Accueil */
+        /* Section Accueil avec Image de fond Tech */
         .hero {
             text-align: center;
-            padding: 40px 0;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            background: linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 0.85)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            border: 1px solid var(--border-color);
         }
 
         .hero h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 10px;
+            color: var(--text-main);
         }
 
         .hero p {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 0;
         }
 
         /* CV / Parcours */
@@ -152,7 +161,7 @@
             margin-bottom: 10px;
         }
 
-        /* Compétences */
+        /* Compétences avec Mini Images */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -164,33 +173,43 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .skill-img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .skill-content {
             padding: 20px;
         }
 
         .skill-card h3 {
             font-size: 1.1rem;
             color: var(--accent-color);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .skill-card ul {
             list-style-type: none;
+            padding-left: 15px;
         }
 
         .skill-card li {
             margin-bottom: 8px;
             font-size: 0.95rem;
-            display: flex;
-            align-items: center;
+            position: relative;
         }
 
         .skill-card li::before {
             content: "•";
             color: var(--accent-color);
             font-weight: bold;
-            display: inline-block; 
-            width: 1em;
-            margin-left: -1em;
+            position: absolute;
+            left: -15px;
         }
 
         /* Veille */
@@ -200,6 +219,15 @@
             border-radius: 6px;
             padding: 25px;
             margin-top: 20px;
+        }
+
+        .veille-banner {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
         }
 
         .veille-sub {
@@ -245,7 +273,7 @@
             <h2>Présentation Personnelle</h2>
             <p>Bonjour et bienvenue sur mon portfolio professionnel. Je m'appelle Anes Chita, je suis né le 20 décembre 2007 et je suis actuellement étudiant au Lycée Parc de Vilgenis, situé à Massy.</p>
             <p>Passionné par les architectures réseaux, les infrastructures systèmes et la sécurité informatique, j'ai choisi de m'orienter vers une formation technique solide afin de comprendre la gestion, le déploiement et la sécurisation des données au sein des organisations.</p>
-            <p>Mon objectif à la suite de ce BTS est de poursuivre mis études vers une licence professionnelle ou un cycle d'ingénieur en alternance, pour évoluer à terme vers les métiers d'administrateur systèmes et réseaux ou de spécialiste en cybersécurité.</p>
+            <p>Mon objectif à la suite de ce BTS est de poursuivre mes études vers une licence professionnelle ou un cycle d'ingénieur en alternance, pour évoluer à terme vers les métiers d'administrateur systèmes et réseaux ou de spécialiste en cybersécurité.</p>
         </section>
 
         <section id="parcours">
@@ -268,36 +296,51 @@
         <section id="competences">
             <h2>Compétences Techniques</h2>
             <div class="skills-grid">
+                
                 <div class="skill-card">
-                    <h3>Infrastructures & Réseaux</h3>
-                    <ul>
-                        <li>Configuration de commutateurs et routeurs</li>
-                        <li>Architecture et adressage IP (LAN / WAN)</li>
-                        <li>Modèle OSI et protocoles réseaux</li>
-                    </ul>
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=400&q=80" alt="Réseau" class="skill-img">
+                    <div class="skill-content">
+                        <h3>Infrastructures & Réseaux</h3>
+                        <ul>
+                            <li>Configuration de commutateurs et routeurs</li>
+                            <li>Architecture et adressage IP (LAN / WAN)</li>
+                            <li>Modèle OSI et protocoles réseaux</li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="skill-card">
-                    <h3>Systèmes & Virtualisation</h3>
-                    <ul>
-                        <li>Administration de bases Windows Server</li>
-                        <li>Utilisation d'environnements Linux (Debian/Ubuntu)</li>
-                        <li>Notions de virtualisation</li>
-                    </ul>
+                    <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=400&q=80" alt="Systèmes" class="skill-img">
+                    <div class="skill-content">
+                        <h3>Systèmes & Virtualisation</h3>
+                        <ul>
+                            <li>Administration de bases Windows Server</li>
+                            <li>Utilisation d'environnements Linux (Debian/Ubuntu)</li>
+                            <li>Notions de virtualisation</li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div class="skill-card">
-                    <h3>Sécurité & Outils</h3>
-                    <ul>
-                        <li>Gestion des droits et des politiques d'accès</li>
-                        <li>Configuration de pare-feu (Firewalls)</li>
-                        <li>Utilisation quotidienne de l'environnement GitHub</li>
-                    </ul>
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=400&q=80" alt="Sécurité" class="skill-img">
+                    <div class="skill-content">
+                        <h3>Sécurité & Outils</h3>
+                        <ul>
+                            <li>Gestion des droits et des politiques d'accès</li>
+                            <li>Configuration de pare-feu (Firewalls)</li>
+                            <li>Utilisation quotidienne de l'environnement GitHub</li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
         </section>
 
         <section id="veille">
             <h2>Veille Technologique</h2>
             <div class="veille-block">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80" alt="Cybersécurité IA" class="veille-banner">
+                
                 <h3>Thématique : L'intégration de l'intelligence artificielle dans la cybersécurité des réseaux d'entreprise</h3>
                 <p><strong>Problématique :</strong> Dans un contexte où les infrastructures réseau se complexifient et où les attaques deviennent automatisées, comment l'intelligence artificielle modifie-t-elle la détection des menaces et la sécurisation des architectures systèmes et réseaux ?</p>
                 
